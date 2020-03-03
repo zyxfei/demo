@@ -40,7 +40,7 @@ public class PathAndQueryParamValidAspect {
           if (errorLists != null) {
               AdvanceResponseSupport.advanceResponse(new Response(404));
            }
-      } catch (NotFoundException | NoSuchMethodException | ClassNotFoundException | ParameterValidException e) {
+      } catch (NotFoundException | ClassNotFoundException | ParameterValidException e) {
           logger.error("e-name：" + e.getClass().getName() + "： message：" + e.getMessage());
       }
   }
