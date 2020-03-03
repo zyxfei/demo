@@ -19,7 +19,7 @@ public class DemoControllerTest2 {
 
     @Test
     public void testController() {
-        Response s = demoController.findId(1);
-        System.out.println(s.getResponse());
+      //  Response s = demoController.findId(1);
+        //System.out.println(s.getResponse());
     }
 }

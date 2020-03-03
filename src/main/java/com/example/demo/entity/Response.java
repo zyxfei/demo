@@ -1,17 +1,25 @@
 package com.example.demo.entity;
 
+import lombok.*;
+
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import java.io.UnsupportedEncodingException;
+
+@AllArgsConstructor
+@NoArgsConstructor
 public class Response {
-    int response = 0;
 
-    public int getResponse() {
-        return response;
+    @Getter(AccessLevel.PUBLIC)
+    @Setter(AccessLevel.PUBLIC)
+    private Integer response = 0;
+
+    @Override
+    public String toString() {
+        return response.toString() ;
     }
 
-    public Response(int response) { 
-        this.response = response;
-    }
-
-    public void setResponse(int response) {
-        this.response = response;
+    public byte[] getBytes(String s) throws UnsupportedEncodingException {
+        return this.toString().getBytes(s);
     }
 }

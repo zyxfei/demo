@@ -47,7 +47,7 @@ public class DemoControllerTest1 {
     @Test
     public void finid() throws Exception {
 //发送请求
-        ResultActions resultActions = this.mockMvc.perform(MockMvcRequestBuilders.get("/ret/{id}",1))
+        ResultActions resultActions = this.mockMvc.perform(MockMvcRequestBuilders.get("/ret/{id}",111))
                 .andExpect(MockMvcResultMatchers.status().isOk());
         MvcResult mvcResult = resultActions.andReturn();
         String result = mvcResult.getResponse().getContentAsString();
